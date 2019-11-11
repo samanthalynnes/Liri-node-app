@@ -23,7 +23,7 @@ Language
 Plot
 Actors
 
-![movie image]("./screenshots/moviethis.png")
+![movie image](./screenshots/moviethis.png)
 
 
 ### spotify-this-song
@@ -35,7 +35,7 @@ Song Name
 Preview Link to Song
 Album Title
 
-![spotify image](https://github.com/samanthalynnes/Liri-node-app/blob/master/screenshots/concertthis.png)
+![spotify image](./screenshots/spotifythissong.png)
 
 ### concert-this
 Type 'node liri.js concert-this *artist/band name of your choice*.
@@ -52,7 +52,7 @@ Date of Event
 Type 'node liri.js do-what-it-says'
 This will pull any commands entered into the random.text file. It is set up right now to run spotify-this-song I Want it That Way
 
-![do it image]("./screenshots/dowhatitsays.png")
+![do it image](./screenshots/dowhatitsays.png)
 
 
 
