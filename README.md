@@ -35,7 +35,7 @@ Song Name
 Preview Link to Song
 Album Title
 
-![spotify image]("./screenshots/spotifythissong.png")
+![spotify image](https://github.com/samanthalynnes/Liri-node-app/blob/master/screenshots/concertthis.png)
 
 ### concert-this
 Type 'node liri.js concert-this *artist/band name of your choice*.
@@ -45,7 +45,7 @@ Venue Name
 Venue Location
 Date of Event
 
-![concert image]("./screenshots/concertthis.png")
+![concert image](./screenshots/concertthis.png)
 
 ### do-what-it-says
 
