@@ -62,30 +62,28 @@ var findMovie = () => {
 
 // Bands in Town
 
-
-var artist = userInput.trim();
-var bandURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
-
 var concertThis = () => {
-
+    var artist = userInput.trim().replace(" ", "+");
+    var bandURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
     axios.get(bandURL).then(function (response) {
-        var eventData = response.data;
-        for (i = 0; i < eventData.length; i++) {
-            var venue = eventData[i].venue.name;
-            var location = eventData[i].venue.city + ", " + eventData[i].venue.country;
-            var event = eventData[i].datetime;
+        var eventData = response.data
+        for (i = 0; i < 3; i++) {
+
+            var bandData = [
+                "Venue Name: " + eventData[i].venue.name,
+                "Venue Location: " + eventData[i].venue.city + ", " + eventData[i].venue.country,
+                "Date of Event: " + eventData[i].datetime
+            ].join("\n\n");
+
+            fs.appendFile("log.txt", bandData + divider, function (err) {
+                if (err) throw err;
+                console.log(bandData);
+            });
         }
-        var bandData = [
-            "Venue Name: " + venue,
-            "Venue Location: " + location,
-            "Date of Event: " + event
-        ].join("\n\n");
-        fs.appendFile("log.txt", bandData + divider, function (err) {
-            if (err) throw err;
-            console.log(bandData);
-        })
     });
 };
+
+
 
 
 // Spotify Song
